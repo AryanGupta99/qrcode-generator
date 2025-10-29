@@ -1,0 +1,120 @@
+// FREE Webhook Solution - Google Apps Script
+// This script runs on Google's servers (100% FREE, no limits for personal use)
+// 
+// SETUP INSTRUCTIONS:
+// 1. Go to: https://script.google.com
+// 2. Click: New Project
+// 3. Delete any code and paste THIS ENTIRE FILE
+// 4. Click: Deploy → New Deployment
+// 5. Type: Web App
+// 6. Execute as: Me
+// 7. Who has access: Anyone
+// 8. Click: Deploy
+// 9. COPY THE WEB APP URL (looks like: https://script.google.com/macros/s/...../exec)
+// 10. Paste that URL into main.go as webhookURL
+
+function doPost(e) {
+  try {
+    // Get the data sent from your survey app
+    var params = e.parameter;
+    
+    // Log to Google Sheets for backup (optional)
+    logToSheet(params);
+    
+    // Submit to Zoho Survey
+    var zohoResponse = submitToZohoSurvey(params);
+    
+    return ContentService.createTextOutput(JSON.stringify({
+      'status': 'success',
+      'message': 'Survey submitted to Zoho',
+      'zoho_response': zohoResponse
+    })).setMimeType(ContentService.MimeType.JSON);
+    
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({
+      'status': 'error',
+      'message': error.toString()
+    })).setMimeType(ContentService.MimeType.JSON);
+  }
+}
+
+function submitToZohoSurvey(data) {
+  // Zoho Survey URL with pre-filled parameters
+  var zohoUrl = 'https://survey.zohopublic.in/zs/T5Fj1T';
+  
+  // Build URL with parameters
+  var params = {
+    'sn': data.server_name || '',
+    'un': data.username || '',
+    '2841000002218049': data.server_performance || '3', // Server Performance field ID
+    '2841000002218075': data.technical_support || '3',  // Technical Support field ID
+    '2841000002218101': data.overall_rating || '3',     // Overall Rating field ID
+    'feedback': data.feedback || ''
+  };
+  
+  // Build query string
+  var queryString = Object.keys(params)
+    .map(function(key) {
+      return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+    })
+    .join('&');
+  
+  var fullUrl = zohoUrl + '?' + queryString;
+  
+  try {
+    // Attempt to submit to Zoho Survey
+    var response = UrlFetchApp.fetch(fullUrl, {
+      'method': 'get',
+      'muteHttpExceptions': true,
+      'followRedirects': true
+    });
+    
+    return {
+      'status_code': response.getResponseCode(),
+      'url': fullUrl,
+      'submitted': true
+    };
+  } catch (error) {
+    return {
+      'error': error.toString(),
+      'url': fullUrl,
+      'submitted': false
+    };
+  }
+}
+
+function logToSheet(data) {
+
+  
+  /*
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var timestamp = new Date();
+  
+  sheet.appendRow([
+    timestamp,
+    data.server_name || '',
+    data.username || '',
+    data.server_performance || '',
+    data.technical_support || '',
+    data.overall_rating || '',
+    data.feedback || ''
+  ]);
+  */
+}
+
+// Test function - you can run this to test the script
+function testSubmission() {
+  var testData = {
+    parameter: {
+      'server_name': 'TEST-SERVER',
+      'username': 'test.user',
+      'server_performance': '3',
+      'technical_support': '2',
+      'overall_rating': '3',
+      'feedback': 'Test feedback from Google Apps Script'
+    }
+  };
+  
+  var result = doPost(testData);
+  Logger.log(result.getContent());
+}
