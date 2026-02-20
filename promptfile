@@ -1,0 +1,130 @@
+Digital Agency Website
+
+Tech Stack
+
+
+
+
+
+Pure HTML5 + CSS3 + Vanilla JavaScript -- zero dependencies, instant loading
+
+
+
+Google Fonts (Inter) for professional typography
+
+
+
+CSS custom properties for theming (white bg, blue accents #2563EB)
+
+
+
+CSS scroll-snap + scroll-behavior: smooth for smooth scrolling
+
+
+
+Responsive via CSS Grid, Flexbox, and media queries
+
+File Structure
+
+Portfolio/
+  index.html      -- Single-page site with all sections
+  css/
+    style.css     -- All styles (variables, layout, components, responsive)
+  js/
+    main.js       -- Smooth scroll, mobile nav toggle, form handling, scroll animations
+  assets/
+    favicon.svg   -- Simple SVG favicon
+
+Page Sections (top to bottom in index.html)
+
+
+
+
+
+Navbar -- Logo text ("DigiCraft"), nav links (Services, Industries, Why Us, Process, Contact), sticky on scroll
+
+
+
+Hero -- Headline, subheadline, two CTA buttons (WhatsApp chat link, consultation anchor to contact form), subtle gradient mesh background
+
+
+
+Services -- 3-card grid (Website Dev, Business Automation, Mobile App Dev) with icon, title, bullet list
+
+
+
+Portfolio / Proof of Work -- Showcase grid with 4-6 mock project cards (screenshots described via CSS gradient placeholders), project name, category tag, brief description. Builds trust without needing real images.
+
+
+
+Who We Work With -- 8-item icon grid (Clinics, Schools, Salons, Gyms, Real Estate, Restaurants, Retail, Service Providers) with CSS-only icons via Unicode/emoji
+
+
+
+Why Choose Us -- 5-item feature list with checkmark icons and short descriptions
+
+
+
+Process -- 4-step horizontal timeline (Consultation, Planning & Design, Development, Launch & Support)
+
+
+
+CTA Banner -- "Ready to Build Your Online Presence?" with "Start Your Project Today" button
+
+
+
+Contact -- Two-column layout: left = form (Name, Business Name, Phone, Message + submit), right = email + WhatsApp click-to-chat link + embedded Google Maps placeholder
+
+
+
+Footer -- Centered copyright line "© 2026 All Rights Reserved"
+
+
+
+Floating WhatsApp Button -- Fixed bottom-right, green circle with WhatsApp icon (SVG inline), links to https://wa.me/918920842499
+
+Key Design Decisions
+
+
+
+
+
+No images required -- All visuals via CSS gradients, SVG icons, and Unicode symbols. Portfolio cards use styled gradient placeholders with overlay text.
+
+
+
+Color palette: White #FFFFFF, Light gray #F8FAFC, Blue accent #2563EB, Dark text #0F172A, Muted text #64748B
+
+
+
+Typography: Inter font, sizes from 1rem (body) to 3.5rem (hero headline), generous line-height
+
+
+
+Animations: Intersection Observer-based fade-in-up on scroll for each section
+
+
+
+Contact form: Posts to https://formsubmit.co/guptaaryan583@gmail.com (free, no backend needed) or shows a success message via JS
+
+
+
+Mobile: Hamburger menu toggle, single-column stacked layout, touch-friendly tap targets
+
+Files to Create
+
+
+
+
+
+index.html -- Full semantic HTML with all 11 sections
+
+
+
+css/style.css -- Complete stylesheet (~400-500 lines)
+
+
+
+js/main.js -- Interactivity (~80-100 lines)
+
+Website name : DigiCraft.com
