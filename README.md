@@ -170,3 +170,65 @@ BUTTON HANDLERS - CHECK FIRST (Priority over LLM classification)
                 }
             )
         
+        
+        Hi there! How can I help you today?
+09:11 PM
+test
+facing login issue
+09:11 PM
+RAGChatBot
+I'm sorry to hear you're having trouble logging in. What is the exact error message you see when you try to login?
+09:11 PM
+test
+logon failed
+09:12 PM
+RAGChatBot
+I understand you're seeing a "logon failed" message. Are multiple users facing this or only you?
+09:12 PM
+test
+multipile
+09:12 PM
+RAGChatBot
+Since multiple users are affected, this needs our team's attention right away. Would you prefer to chat with an agent right now, or schedule a callback?
+09:12 PM
+test
+📅 Schedule Callback
+09:12 PM
+RAGChatBot
+Perfect! I'm setting up a callback request for you.
+
+Please provide:
+1. Your preferred time (e.g., 'tomorrow at 2 PM' or 'Monday morning')
+2. Your phone number
+
+Our support team will call you back at that time.
+09:12 PM
+test
+time : 11pm today
+phone:343433333
+09:12 PM
+RAGChatBot
+I got your details, but I couldn't create the callback in our system right now. Please call our support team at 1-888-415-5240 for immediate help.
+09:12 PM
+test
+my issue is resolved
+09:14 PM
+RAGChatBot
+Thank you for providing your preferred callback time and phone number.
+
+I'm glad to hear your issue is resolved! Since it's already fixed, would you still like me to schedule that callback for 11 PM today, or should I cancel it?
+09:14 PM
+test
+cancel it
+09:14 PM
+RAGChatBot
+Okay, I've canceled the callback request. I'm happy to hear your login issue is resolved! Is there anything else I can assist you with today?
+09:14 PM
+test
+can you close this caht
+09:15 PM
+RAGChatBot
+I can't directly close the chat, but you can simply close your browser window or tab. If you have any other questions later, feel free to start a new chat!
+09:16 PM
+💬 Chat with Technician
+📅 Schedule Callback
