@@ -48,18 +48,3 @@ You can reuse ZohoSalesIQAPI.close_chat() in your new codebase or webhook handle
 📌 Note: department_id and app_id aren’t needed for closing, but they are still required for visitor‑transfer operations.
 
 Let me know if you need help wiring this into your FastAPI endpoints or automating other SalesIQ/Desk actions!
-
-# OAuth client
-SALESIQ_CLIENT_ID=1000.GI3NJ9CG0KZ7FMT1ZS4GLYS4I0R3ZW
-SALESIQ_CLIENT_SECRET=8b5c2019ec1c0c9ce6bcc021b964533229420236ad
-
-# Tokens (access token was refreshed during tests – the first value is what was issued,
-# the second value is the token that the library refreshed to)
-SALESIQ_ACCESS_TOKEN=1000.1b98cd09d902147d2c8eb07a4db2b4f5.279fc739f96cd28056d7a588bb52924c
-               (later refreshed to → 1000.e51121544a2f1827e7fe3d53b…)
-SALESIQ_REFRESH_TOKEN=1000.f4ed25c35ac15cdda5741adc1aef2eca.0ce3876faec3425a423338374c7b2de6
-
-# Other required settings
-SALESIQ_SCREEN_NAME=rtdsportal
-SALESIQ_API_DOMAIN=https://salesiq.zoho.in
-SALESIQ_ORG_ID=2782000000000000000          # required for chat‑control
