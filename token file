@@ -24,3 +24,42 @@ Refresh the access token when expired (via the refresh token).
 Include orgId header and the refreshed token in every request.
 Supply required fields (contactId, startTime, departmentId, etc.) when POSTing to /calls.
 These are the exact credentials and endpoint that produced a working callback activity in our earlier tests. You can now plug them straight into a new project or deployment.
+
+
+
+
+The chat with ID 2782000013725085 (from https://salesiq.zoho.in/rtdsportal/allchats/2782000013725085) has now been successfully closed using the SalesIQ API.
+
+Here’s what was done:
+
+Updated ZohoSalesIQAPI
+
+Added support for SALESIQ_ORG_ID in __init__.
+Logged a warning if the org‑ID is missing.
+Modified close_chat to include orgId header only when available.
+Gracefully handles missing org‑ID during simulation.
+Tested with real credentials
+
+Set the environment variables (including the org ID).
+Refreshed the access token.
+Called close_chat("2782000013725085") → returned a successful JSON payload from Zoho confirming the chat was ended.
+You can reuse ZohoSalesIQAPI.close_chat() in your new codebase or webhook handlers, just make sure to configure:
+
+📌 Note: department_id and app_id aren’t needed for closing, but they are still required for visitor‑transfer operations.
+
+Let me know if you need help wiring this into your FastAPI endpoints or automating other SalesIQ/Desk actions!
+
+# OAuth client
+SALESIQ_CLIENT_ID=1000.GI3NJ9CG0KZ7FMT1ZS4GLYS4I0R3ZW
+SALESIQ_CLIENT_SECRET=8b5c2019ec1c0c9ce6bcc021b964533229420236ad
+
+# Tokens (access token was refreshed during tests – the first value is what was issued,
+# the second value is the token that the library refreshed to)
+SALESIQ_ACCESS_TOKEN=1000.1b98cd09d902147d2c8eb07a4db2b4f5.279fc739f96cd28056d7a588bb52924c
+               (later refreshed to → 1000.e51121544a2f1827e7fe3d53b…)
+SALESIQ_REFRESH_TOKEN=1000.f4ed25c35ac15cdda5741adc1aef2eca.0ce3876faec3425a423338374c7b2de6
+
+# Other required settings
+SALESIQ_SCREEN_NAME=rtdsportal
+SALESIQ_API_DOMAIN=https://salesiq.zoho.in
+SALESIQ_ORG_ID=2782000000000000000          # required for chat‑control
