@@ -1,0 +1,33 @@
+
+For the India data‑center account you’ve been working with, the values that successfully created a callback (as demonstrated above) are:
+
+Item	Value
+API base URL	https://desk.zoho.in/api/v1
+Org ID	60000688226
+Department ID	3086000000010772
+Client ID	1000.HQHXAXVOR5842RWGEF22YFCMEKMUPP
+Client Secret	2b4014e5f954d1aaab4e90228b3261e920f1be8abc
+Access Token (short‑lived)	1000.eef003395ead371a4c329a99463c2996.0c5c675c9e18af69c0329eaa454c1097
+Refresh Token (long‑lived)	1000.d1b8fd2550f80083d19f7e4377bca62b.cea96c986e276757275278724d0bc45c
+Scopes granted	Desk.settings.READ Desk.contacts.READ Desk.contacts.CREATE Desk.activities.calls.CREATE Desk.calls.CREATE
+🔁 Token lifecycle
+The access token expires in one hour. When it does, use the refresh token (with the same client ID/secret) to obtain a new access token:
+
+Replace <REFRESH_TOKEN> etc. with the real values above. A successful response will return another access_token (and sometimes a new refresh_token).
+
+How to configure a new codebase
+Place the above values in your environment or configuration (e.g., .env):
+
+Your code simply needs to:
+
+Use ZOHO_API_DOMAIN as the base (https://desk.zoho.in/api/v1).
+Refresh the access token when expired (via the refresh token).
+Include orgId header and the refreshed token in every request.
+Supply required fields (contactId, startTime, departmentId, etc.) when POSTing to /calls.
+These are the exact credentials and endpoint that produced a working callback activity in our earlier tests. You can now plug them straight into a new project or deployment.Your code simply needs to:
+
+Use ZOHO_API_DOMAIN as the base (https://desk.zoho.in/api/v1).
+Refresh the access token when expired (via the refresh token).
+Include orgId header and the refreshed token in every request.
+Supply required fields (contactId, startTime, departmentId, etc.) when POSTing to /calls.
+These are the exact credentials and endpoint that produced a working callback activity in our earlier tests. You can now plug them straight into a new project or deployment.
