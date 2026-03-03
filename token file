@@ -48,3 +48,45 @@ You can reuse ZohoSalesIQAPI.close_chat() in your new codebase or webhook handle
 📌 Note: department_id and app_id aren’t needed for closing, but they are still required for visitor‑transfer operations.
 
 Let me know if you need help wiring this into your FastAPI endpoints or automating other SalesIQ/Desk actions!
+
+Hi there! How can I help you today?
+08:25 PM
+test
+getting password issue
+08:25 PM
+?
+08:26 PM
+RAGChatBot
+I was asking if other people are also having password issues, or if it's just you.
+08:26 PM
+test
+password issue
+08:26 PM
+RAGChatBot
+Thanks for clarifying. Is it just you experiencing the password issue, or are there other users facing the same problem?
+08:26 PM
+test
+just me
+08:26 PM
+RAGChatBot
+Thanks for confirming. Please visit https://selfcare.acecloudhosting.com and click 'Forgot your password'. Let me know when you're there.
+08:26 PM
+test
+okay
+08:26 PM
+RAGChatBot
+Great! Now, please enter your Server Username and complete the CAPTCHA verification.
+08:26 PM
+test
+okay done
+08:26 PM
+RAGChatBot
+Excellent. Next, choose an authentication method from the list and enter your new password.
+08:26 PM
+test
+yes done
+08:26 PM
+Gaurav1 has ended this chat session 08:26 PM
+RAGChatBot
+Great to hear your issue is resolved! If you ever need help again, feel free to start a new chat. Have a great day!
+08:26 PM
