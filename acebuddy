@@ -5,55 +5,16 @@ ggAAAAtzc2gtZWQyNTUxOQAAACDp3WLdxJGka1+KlnIdXQwpY1oxkGOr+Ux2w+hYc6ys3w
 AAAEAweVdd+cSHyUjzNv7r5gDBg4RFPra+jOEyRkCwmNVEKundYt3EkaRrX4qWch1dDClj
 WjGQY6v5THbD6FhzrKzfAAAADGFjZWJ1ZGR5LW92aAE=
 -----END OPENSSH PRIVATE KEY-----
-Hello! How can I help you today?
-08:49 PM
-test
-facing qb issue
-08:49 PM
-RAGChatBot
-I'm sorry to hear you're facing an issue with QuickBooks. Could you please describe what's happening?
-08:49 PM
-test
-its frozen
-08:49 PM
-RAGChatBot
-I understand QuickBooks is frozen. Do you see a "QB Reset App" icon on your taskbar or desktop?
-08:49 PM
-test
-yes
-08:49 PM
-RAGChatBot
-Great! Please click on the "QB Reset App" icon to run the reset. It usually takes about 30 seconds.
-08:49 PM
-test
-okay done
-08:49 PM
-RAGChatBot
-Now, please try opening QuickBooks again. Is it working for you now?
-08:49 PM
-test
-not working
-08:49 PM
-RAGChatBot
-I'm sorry to hear it's still not working. Let's try to force-close QuickBooks using Task Manager. Please right-click on your taskbar and select 'Task Manager'.
-08:50 PM
-test
-okay done
-08:50 PM
-RAGChatBot
-Now, go to the 'Users' tab and click your username to expand it.
-08:50 PM
-test
-okay
-08:51 PM
-RAGChatBot
-Please find QuickBooks in the list, right-click it, and select 'End task'.
-08:51 PM
-test
-yes done
-08:51 PM
-RAGChatBot
-Now, please try opening QuickBooks again. Is it working now?
-08:51 PM
-💬 Chat with Technician
-📅 Schedule Callback
+
+1.show department selection buttons initially 
+Name
+
+Button text - (6)
+Sales & Solutions : Department id : 2782000000016007
+Technical Support (QB & App Hosting) Department id : 2782000000002013
+VDI/DaaS Support : Department id : 2782000003389315
+Billing : Dep id : 2782000000718087
+Initially it should show up these buttons and route/transfer chat to these departments to show the chat our department is technical support qb and app hosting.
+
+2.chat rings for about 2 minutes but there are times when chat might get missed due to agents availability and busy so we have to handle it properly like you can show message currently all agents are busy right now would you like to schedule callback and chat transfer then show option of retry chat transfer or schedule callback simple message buttons then it will do api call again for these 
+
