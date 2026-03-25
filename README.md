@@ -1,3 +1,16 @@
+ }
+}[2026-03-16 15:34:47] INFO     [llm_chatbot_simplified] Resolution detection result: False
+[2026-03-16 15:34:47] INFO     [llm_chatbot_simplified] Calling LLM with 21 messages
+[2026-03-16 15:34:58] INFO     [llm_chatbot_simplified] --- RAW WEBHOOK DATA ---: {'handler': 'failure', 'request': {'ip': '167.103.5.40', 'location': {}, 'id': 'a8da5edd670a1af02e59871b16c7f490f97a2e4c09957b9236a3a28e246936457a08526bcd1def6074f60c67e9a1758b5aa07870b26a5828edff1cdae96fa9dc', 'app_id': '2782000005628361'}, 'chat': {}, 'org_id': '60000687661', 'cause': {'code': 1007, 'desc': 'execution_failure'}, 'visitor': {'question': 'Hello, I am your Acebuddy', 'department_id': 2782000000002013, 'ip': '167.103.5.40', 'visitor_id': 2782000013922007, 'channel': 'website', 'language': 'en', 'time_zone': 'Asia/Calcutta', 'active_conversation_id': 2782000013922007, 'country_code': 'IN', 'in_time': 1773674841665, 'custom_info': {'Business Name (required)': 'test'}, 'visitid': 88338, 'phone': '+917878787878', 'name': 'test', 'email': 'test@test.com'}, 'failed_response': {}}
+[2026-03-16 15:34:58] INFO     [llm_chatbot_simplified] Webhook received
+[2026-03-16 15:34:58] INFO     [llm_chatbot_simplified] HTTP POST /webhook/salesiq | Status: 200 | Duration: 0.002s
+[2026-03-16 15:34:58] INFO     [uvicorn.access] 103.89.74.49:0 - "POST /webhook/salesiq HTTP/1.0" 200
+[2026-03-16 15:35:07] INFO     [llm_chatbot_simplified] LLM response length: 105 chars
+[2026-03-16 15:35:07] INFO     [llm_chatbot_simplified] HTTP POST /webhook/salesiq | Status: 200 | Duration: 19.619s
+ubuntu@acebuddy:/var/www/acebuddy/logs$
+Implement try catch block in the execution failure. when code does not respond in the chat widget then show the escalation buttons.
+
+
 test
 BUTTON HANDLERS - CHECK FIRST (Priority over LLM classification)
         # ============================================================
